@@ -1,0 +1,48 @@
+{
+  "name": "highcharts-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:dist": "cleandir \"dist\"",
+    "build": "tsc && babel --out-file dist/js/bundle.js src/index.tsx",
+    "bro": "webpack",
+    "check-types": "tsc",
+    "serve": "browser-sync start -s \"demo\" -f \"demo\" --ss \"dist\"",
+    "sass": "node-sass src/style/main.scss",
+    "watch-serve": "run-p serve watch:*",
+    "watch:tsc": "onchange \"src/**/*.(ts|tsx)\" -- run-s bro",
+    "watch:scss": "onchange \"src/**/*.scss\" -- run-s sass",
+    "watch": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@turtlemay/jsx-dom": "^1.0.0",
+    "highcharts": "^8.0.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "devDependencies": {
+    "@angular/common": "^9.0.2",
+    "@angular/compiler": "^9.0.2",
+    "@angular/core": "^9.0.1",
+    "@angular/platform-browser": "^9.0.2",
+    "@angular/platform-browser-dynamic": "^9.0.2",
+    "@types/react": "^16.9.20",
+    "core-js": "^3.6.4",
+    "diff-dom": "^4.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rxjs": "^6.5.4",
+    "tslint": "^6.0.0",
+    "tslint-config-standard": "^9.0.0",
+    "webpack-cli": "^3.3.11",
+    "zone.js": "^0.10.2"
+  }
+}
