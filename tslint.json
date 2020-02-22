@@ -2,6 +2,28 @@
     "extends": "tslint-config-standard",
     "rules": {
         "semicolon": [true, "always"],
-        "space-before-function-paren":  [true, "never"]
+        "space-before-function-paren":  [true, "never"],
+        "indent": [true, "spaces", 4],
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-module",
+            "check-separator",
+            "check-rest-spread",
+            "check-type",
+            "check-typecast",
+            "check-type-operator",
+            "check-preblock",
+            "check-postbrace"
+        ],
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "always",
+                "singleline": "never"
+            }
+        ]
     }
 }
